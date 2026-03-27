@@ -1,0 +1,8 @@
+{
+    "name": "shard",
+    "displayName": "Shard Mod",
+    "author": "RTX 5090",
+    "description": "A mod that adds a powerful turret named 'Shard' that shoots fragment bullets.",
+    "version": "1.0",
+    "minGameVersion": "136"
+}

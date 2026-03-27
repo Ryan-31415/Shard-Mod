@@ -1,0 +1,218 @@
+type: ItemTurret
+name: "샤드"
+description: "많은 전력과 냉각 액체, 탄환이 공급되면 장거리에 걸쳐 플라즈마 파편탄 세례를 퍼붓습니다."
+size: 5
+health: 6300
+buildCost: 8
+
+requirements: [
+  copper/2000
+  lead/1250
+  graphite/1250
+  metaglass/1000
+  titanium/1500
+  thorium/1300
+  silicon/1250
+  plastanium/850
+  phase-fabric/850
+  surge-alloy/1000
+]
+category: turret
+range: 338
+inaccuracy: 4
+reload: 4.2
+ammoCapacity: 120
+targetAir: true
+targetGround: true
+recoil: 5
+shake: 3
+
+ammoTypes: {
+  graphite: {
+    type: BasicBulletType
+    damage: 50
+    speed: 9
+    sprite: "shell"
+    width: 16
+    height: 24
+    collidesAir: true
+    collidesGround: true
+    collides: true
+    collidesTiles: true
+    despawnEffect: massiveExplosion
+    ammoMultiplier: 1
+    reloadMultiplier: 1.5
+    fragBullets: 10
+    fragBullet: {
+      type: BasicBulletType
+      damage: 36
+      speed: 6
+      width: 18
+      height: 18
+      collidesAir: true
+      collidesGround: true
+      collides: true
+      collidesTiles: true
+      lifetime: 15
+    }
+  }
+  thorium: {
+    type: BasicBulletType
+    damage: 90
+    speed: 9
+    sprite: "shell"
+    width: 16
+    height: 24
+    collidesAir: true
+    collidesGround: true
+    collides: true
+    collidesTiles: true
+    despawnEffect: massiveExplosion
+    ammoMultiplier: 1
+    fragBullets: 8
+    fragBullet: {
+      type: BasicBulletType
+      damage: 72
+      speed: 6
+      width: 22
+      height: 22
+      pierce: true
+      pierceCap: 1
+      collidesAir: true
+      collidesGround: true
+      collides: true
+      collidesTiles: true
+      lifetime: 10
+    }
+  }
+  plastanium: {
+    type: BasicBulletType
+    damage: 75
+    speed: 9
+    sprite: "shell"
+    width: 16
+    height: 24
+    collidesAir: true
+    collidesGround: true
+    collides: true
+    collidesTiles: true
+    despawnEffect: plasticExplosion
+    ammoMultiplier: 1
+    fragBullets: 16
+    fragBullet: {
+      type: BasicBulletType
+      damage: 38
+      speed: 6
+      width: 15
+      height: 15
+      collidesAir: true
+      collidesGround: true
+      collides: true
+      collidesTiles: true
+      lifetime: 20
+    }
+  }
+  surge-alloy: {
+    type: BasicBulletType
+    damage: 100
+    speed: 9
+    sprite: "shell"
+    width: 16
+    height: 24
+    lightning: 2
+    lightningLength: 10
+    lightningDamage: 15
+    collidesAir: true
+    collidesGround: true
+    collides: true
+    collidesTiles: true
+    despawnEffect: massiveExplosion
+    ammoMultiplier: 2
+    status: shocked
+    fragBullets: 10
+    fragBullet: {
+      type: BasicBulletType
+      damage: 67
+      speed: 6
+      width: 18
+      height: 18
+      lightning: 1
+      lightningLength: 7
+      lightningDamage: 10
+      pierce: true
+      pierceCap: 1
+      collidesAir: true
+      collidesGround: true
+      collides: true
+      collidesTiles: true
+      status: shocked
+      lifetime: 20
+    }
+  }
+  pyratite: {
+    type: BasicBulletType
+    damage: 45
+    speed: 9
+    sprite: "shell"
+    width: 16
+    height: 24
+    collidesAir: true
+    collidesGround: true
+    collides: true
+    collidesTiles: true
+    splashDamage: 50
+    splashDamageRadius: 35
+    despawnEffect: massiveExplosion
+    ammoMultiplier: 2
+    status: melting
+    makeFire: true
+    fragBullets: 12
+    fragBullet: {
+      type: BasicBulletType
+      damage: 30
+      speed: 6
+      width: 15
+      height: 15
+      splashDamage: 18
+      splashDamageRadius: 16
+      status: burning
+      makeFire: true
+      lifetime: 20
+    }
+  }
+}
+
+// 냉각 효율 배율 (1.0이면 추가 보너스 없음, 숫자가 커질수록 냉각수 효과 증대)
+coolantMultiplier: 0.5
+coolantUsage: 1.6
+
+consumes: {
+  power: 25
+  coolant: {
+    amount: 1.6
+    optional: false // 액체가 없으면 작동 불가 (멜트다운 방식)
+  }
+}
+liquidCapacity: 120
+
+research: {
+  parent: "spectre"
+  requirements: [
+    copper/125000
+    lead/100000
+    graphite/85000
+    metaglass/55000
+    titanium/85000
+    thorium/70000
+    silicon/60000
+    plastanium/35000
+    phase-fabric/25000
+    surge-alloy/20000
+  ]
+  objectives: [
+    {
+      type: SectorComplete
+      preset: "desolateRift"
+    }
+  ]
+}
