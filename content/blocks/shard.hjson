@@ -19,7 +19,7 @@ requirements: [
 ]
 category: turret
 range: 338
-inaccuracy: 4
+inaccuracy: 3
 reload: 4.2
 ammoCapacity: 120
 targetAir: true
@@ -39,10 +39,13 @@ ammoTypes: {
     collidesGround: true
     collides: true
     collidesTiles: true
-    despawnEffect: massiveExplosion
+    despawnEffect: explosion
     ammoMultiplier: 1
     reloadMultiplier: 1.5
+    frontColor: "feb380"
+    backColor: "ea8878" 
     fragBullets: 10
+                    
     fragBullet: {
       type: BasicBulletType
       damage: 36
@@ -54,6 +57,8 @@ ammoTypes: {
       collides: true
       collidesTiles: true
       lifetime: 15
+      frontColor: "feb380"
+      backColor: "ea8878" 
     }
   }
   thorium: {
@@ -67,8 +72,10 @@ ammoTypes: {
     collidesGround: true
     collides: true
     collidesTiles: true
-    despawnEffect: massiveExplosion
+    despawnEffect: explosion
     ammoMultiplier: 1
+    frontColor: "f9a3c7"
+    backColor: "cb8ebf"
     fragBullets: 8
     fragBullet: {
       type: BasicBulletType
@@ -83,6 +90,8 @@ ammoTypes: {
       collides: true
       collidesTiles: true
       lifetime: 10
+      frontColor: "f9a3c7"
+      backColor: "cb8ebf"
     }
   }
   plastanium: {
@@ -98,6 +107,8 @@ ammoTypes: {
     collidesTiles: true
     despawnEffect: plasticExplosion
     ammoMultiplier: 1
+    frontColor: "ffd37f"
+    backColor: "e29557"
     fragBullets: 16
     fragBullet: {
       type: BasicBulletType
@@ -110,6 +121,8 @@ ammoTypes: {
       collides: true
       collidesTiles: true
       lifetime: 20
+      frontColor: "ffd37f"
+      backColor: "e29557"
     }
   }
   surge-alloy: {
@@ -126,9 +139,11 @@ ammoTypes: {
     collidesGround: true
     collides: true
     collidesTiles: true
-    despawnEffect: massiveExplosion
+    despawnEffect: explosion
     ammoMultiplier: 2
     status: shocked
+    frontColor: "ffff7e"
+    backColor: "ba894b"
     fragBullets: 10
     fragBullet: {
       type: BasicBulletType
@@ -147,6 +162,8 @@ ammoTypes: {
       collidesTiles: true
       status: shocked
       lifetime: 20
+      frontColor: "ffff7e"
+      backColor: "ba894b"
     }
   }
   pyratite: {
@@ -166,6 +183,8 @@ ammoTypes: {
     ammoMultiplier: 2
     status: melting
     makeFire: true
+    frontColor: "ffaa5f"
+    backColor: "d37f47"
     fragBullets: 12
     fragBullet: {
       type: BasicBulletType
@@ -178,6 +197,8 @@ ammoTypes: {
       status: burning
       makeFire: true
       lifetime: 20
+      frontColor: "ffaa5f"
+      backColor: "d37f47"
     }
   }
 }
