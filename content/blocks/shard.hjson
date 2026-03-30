@@ -3,7 +3,8 @@ name: "샤드"
 description: "많은 전력과 냉각수, 탄환이 공급되면 장거리에 걸쳐 플라즈마 파편탄 세례를 퍼붓습니다."
 size: 5
 health: 5500
-buildCost: 8
+buildCost: 1
+buildSpeedMultiplier: 2
 
 requirements: [
   copper/1800
@@ -15,6 +16,7 @@ requirements: [
   plastanium/750
   surge-alloy/900
 ]
+
 category: turret
 range: 338
 inaccuracy: 3
