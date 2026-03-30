@@ -1,6 +1,6 @@
 type: ItemTurret
-name: "샤드"
-description: "상당한 전력과 냉각수, 탄환이 공급되면 장거리에 걸쳐 플라즈마 파편탄 세례를 퍼붓습니다."
+name: "Shard"
+description: "..."
 size: 7
 health: 8750
 buildCost: 1
@@ -24,8 +24,8 @@ reload: 3.5
 ammoCapacity: 120
 targetAir: true
 targetGround: true
-recoil: 5
-shake: 3
+recoil: 6
+shake: 4
 
 ammoTypes: {
   graphite: {
