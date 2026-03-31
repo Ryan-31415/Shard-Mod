@@ -111,7 +111,7 @@ ammoTypes: {
     collides: true
     collidesTiles: true
     despawnEffect: plasticExplosion
-    ammoMultiplier: 2
+    ammoMultiplier: 1
     frontColor: "fffac6"
     backColor: "d8d97f"
     fragBullets: 18
@@ -165,7 +165,7 @@ ammoTypes: {
       lightningLength: 7
       lightningDamage: 21
       pierce: true
-      pierceCap: 3
+      pierceCap: 2
       collidesAir: true
       collidesGround: true
       collides: true
