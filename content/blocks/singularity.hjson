@@ -38,6 +38,7 @@ ammoTypes: {
     pierceCap: -1
     armorPierce: true
     ammoMultiplier: 1
+    bulidingDamageMultiplier: 0.1
     
     frontColor: "f3e979"
     backColor: "ffffff"
