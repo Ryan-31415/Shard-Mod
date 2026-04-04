@@ -4,5 +4,5 @@
     "author": "RTX 5090",
     "description": "A mod that adds extra turrets to the game.",
     "version": "2.0",
-     "minGameVersion": "136"
+    "minGameVersion": "136"
 }
